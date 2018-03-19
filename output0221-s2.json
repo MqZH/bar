@@ -1,0 +1,722 @@
+[
+    {
+        "localContrast": 6,
+        "mean": 100,
+        "dataSource": [
+            {
+                "name": 0,
+                "ifTarget": 0,
+                "frequency": 128.3762886
+            },
+            {
+                "name": 1,
+                "ifTarget": 0,
+                "frequency": 92.71921584
+            },
+            {
+                "name": 2,
+                "ifTarget": 0,
+                "frequency": 126.506166
+            },
+            {
+                "name": 3,
+                "ifTarget": 0,
+                "frequency": 101.0610997
+            },
+            {
+                "name": 4,
+                "ifTarget": 0,
+                "frequency": 119.6640127
+            },
+            {
+                "name": 5,
+                "ifTarget": 0,
+                "frequency": 129.5271758
+            },
+            {
+                "name": 6,
+                "ifTarget": 0,
+                "frequency": 129.3563206
+            },
+            {
+                "name": 7,
+                "ifTarget": 0,
+                "frequency": 82.21641672
+            },
+            {
+                "name": 8,
+                "ifTarget": 0,
+                "frequency": 84.26546978
+            },
+            {
+                "name": 9,
+                "ifTarget": 0,
+                "frequency": 115.599866
+            },
+            {
+                "name": 10,
+                "ifTarget": 0,
+                "frequency": 114.7596907
+            },
+            {
+                "name": 11,
+                "ifTarget": 0,
+                "frequency": 102.390681
+            },
+            {
+                "name": 12,
+                "ifTarget": 0,
+                "frequency": 106.6561869
+            },
+            {
+                "name": 13,
+                "ifTarget": 0,
+                "frequency": 107.8639033
+            },
+            {
+                "name": 14,
+                "ifTarget": 0,
+                "frequency": 96.55511764
+            },
+            {
+                "name": 15,
+                "ifTarget": 0,
+                "frequency": 94.46658317
+            },
+            {
+                "name": 16,
+                "ifTarget": 0,
+                "frequency": 104.2275375
+            },
+            {
+                "name": 17,
+                "ifTarget": 0,
+                "frequency": 118.8572663
+            },
+            {
+                "name": 18,
+                "ifTarget": 0,
+                "frequency": 89.88053083
+            },
+            {
+                "name": 19,
+                "ifTarget": 0,
+                "frequency": 102.3086211
+            },
+            {
+                "name": 20,
+                "ifTarget": 0,
+                "frequency": 95.8034486
+            },
+            {
+                "name": 21,
+                "ifTarget": 0,
+                "frequency": 139.8220654
+            },
+            {
+                "name": 22,
+                "ifTarget": 0,
+                "frequency": 99.63116061
+            },
+            {
+                "name": 23,
+                "ifTarget": 0,
+                "frequency": 60.73409428
+            },
+            {
+                "name": 24,
+                "ifTarget": 0,
+                "frequency": 62.50722997
+            },
+            {
+                "name": 25,
+                "ifTarget": 0,
+                "frequency": 75.55845765
+            },
+            {
+                "name": 26,
+                "ifTarget": 0,
+                "frequency": 52.32149075
+            },
+            {
+                "name": 27,
+                "ifTarget": 0,
+                "frequency": 66.26155802
+            },
+            {
+                "name": 28,
+                "ifTarget": 0,
+                "frequency": 79.18432752
+            },
+            {
+                "name": 29,
+                "ifTarget": 1,
+                "frequency": 99.0621315
+            }
+        ],
+        "isMinLevel": 1,
+        "highContrast": 2,
+        "chartPosi": 29,
+        "SD": 20,
+        "contrast": 0,
+        "valuePosi": 50,
+        "targetBar": 5,
+        "barScale": 30
+    },
+    {
+        "localContrast": 6,
+        "mean": 100,
+        "dataSource": [
+            {
+                "name": 0,
+                "ifTarget": 0,
+                "frequency": 92.71921584
+            },
+            {
+                "name": 1,
+                "ifTarget": 0,
+                "frequency": 101.0610997
+            },
+            {
+                "name": 2,
+                "ifTarget": 0,
+                "frequency": 99.0621315
+            },
+            {
+                "name": 3,
+                "ifTarget": 0,
+                "frequency": 126.506166
+            },
+            {
+                "name": 4,
+                "ifTarget": 0,
+                "frequency": 129.5271758
+            },
+            {
+                "name": 5,
+                "ifTarget": 0,
+                "frequency": 119.6640127
+            },
+            {
+                "name": 6,
+                "ifTarget": 0,
+                "frequency": 128.3762886
+            },
+            {
+                "name": 7,
+                "ifTarget": 1,
+                "frequency": 99.63116061
+            },
+            {
+                "name": 8,
+                "ifTarget": 0,
+                "frequency": 129.3563206
+            },
+            {
+                "name": 9,
+                "ifTarget": 0,
+                "frequency": 139.8220654
+            },
+            {
+                "name": 10,
+                "ifTarget": 0,
+                "frequency": 82.21641672
+            },
+            {
+                "name": 11,
+                "ifTarget": 0,
+                "frequency": 84.26546978
+            },
+            {
+                "name": 12,
+                "ifTarget": 0,
+                "frequency": 115.599866
+            },
+            {
+                "name": 13,
+                "ifTarget": 0,
+                "frequency": 60.73409428
+            },
+            {
+                "name": 14,
+                "ifTarget": 0,
+                "frequency": 79.18432752
+            },
+            {
+                "name": 15,
+                "ifTarget": 0,
+                "frequency": 114.7596907
+            },
+            {
+                "name": 16,
+                "ifTarget": 0,
+                "frequency": 102.390681
+            },
+            {
+                "name": 17,
+                "ifTarget": 0,
+                "frequency": 106.6561869
+            },
+            {
+                "name": 18,
+                "ifTarget": 0,
+                "frequency": 107.8639033
+            },
+            {
+                "name": 19,
+                "ifTarget": 0,
+                "frequency": 96.55511764
+            },
+            {
+                "name": 20,
+                "ifTarget": 0,
+                "frequency": 94.46658317
+            },
+            {
+                "name": 21,
+                "ifTarget": 0,
+                "frequency": 104.2275375
+            },
+            {
+                "name": 22,
+                "ifTarget": 0,
+                "frequency": 118.8572663
+            },
+            {
+                "name": 23,
+                "ifTarget": 0,
+                "frequency": 89.88053083
+            },
+            {
+                "name": 24,
+                "ifTarget": 0,
+                "frequency": 62.50722997
+            },
+            {
+                "name": 25,
+                "ifTarget": 0,
+                "frequency": 75.55845765
+            },
+            {
+                "name": 26,
+                "ifTarget": 0,
+                "frequency": 102.3086211
+            },
+            {
+                "name": 27,
+                "ifTarget": 0,
+                "frequency": 52.32149075
+            },
+            {
+                "name": 28,
+                "ifTarget": 0,
+                "frequency": 95.8034486
+            },
+            {
+                "name": 29,
+                "ifTarget": 0,
+                "frequency": 66.26155802
+            }
+        ],
+        "isMinLevel": 0,
+        "highContrast": 2,
+        "chartPosi": 7,
+        "SD": 20,
+        "contrast": 100,
+        "valuePosi": 50,
+        "targetBar": 29,
+        "barScale": 30
+    },
+    {
+        "localContrast": 9,
+        "mean": 100,
+        "dataSource": [
+            {
+                "name": 0,
+                "ifTarget": 0,
+                "frequency": 128.3762886
+            },
+            {
+                "name": 1,
+                "ifTarget": 0,
+                "frequency": 92.71921584
+            },
+            {
+                "name": 2,
+                "ifTarget": 0,
+                "frequency": 126.506166
+            },
+            {
+                "name": 3,
+                "ifTarget": 0,
+                "frequency": 101.0610997
+            },
+            {
+                "name": 4,
+                "ifTarget": 0,
+                "frequency": 119.6640127
+            },
+            {
+                "name": 5,
+                "ifTarget": 0,
+                "frequency": 129.5271758
+            },
+            {
+                "name": 6,
+                "ifTarget": 0,
+                "frequency": 129.3563206
+            },
+            {
+                "name": 7,
+                "ifTarget": 0,
+                "frequency": 115.599866
+            },
+            {
+                "name": 8,
+                "ifTarget": 0,
+                "frequency": 114.7596907
+            },
+            {
+                "name": 9,
+                "ifTarget": 0,
+                "frequency": 102.390681
+            },
+            {
+                "name": 10,
+                "ifTarget": 0,
+                "frequency": 106.6561869
+            },
+            {
+                "name": 11,
+                "ifTarget": 0,
+                "frequency": 79.18432752
+            },
+            {
+                "name": 12,
+                "ifTarget": 0,
+                "frequency": 60.73409428
+            },
+            {
+                "name": 13,
+                "ifTarget": 0,
+                "frequency": 82.21641672
+            },
+            {
+                "name": 14,
+                "ifTarget": 0,
+                "frequency": 84.26546978
+            },
+            {
+                "name": 15,
+                "ifTarget": 1,
+                "frequency": 99.0621315
+            },
+            {
+                "name": 16,
+                "ifTarget": 0,
+                "frequency": 52.32149075
+            },
+            {
+                "name": 17,
+                "ifTarget": 0,
+                "frequency": 89.88053083
+            },
+            {
+                "name": 18,
+                "ifTarget": 0,
+                "frequency": 62.50722997
+            },
+            {
+                "name": 19,
+                "ifTarget": 0,
+                "frequency": 66.26155802
+            },
+            {
+                "name": 20,
+                "ifTarget": 0,
+                "frequency": 75.55845765
+            },
+            {
+                "name": 21,
+                "ifTarget": 0,
+                "frequency": 107.8639033
+            },
+            {
+                "name": 22,
+                "ifTarget": 0,
+                "frequency": 96.55511764
+            },
+            {
+                "name": 23,
+                "ifTarget": 0,
+                "frequency": 94.46658317
+            },
+            {
+                "name": 24,
+                "ifTarget": 0,
+                "frequency": 104.2275375
+            },
+            {
+                "name": 25,
+                "ifTarget": 0,
+                "frequency": 118.8572663
+            },
+            {
+                "name": 26,
+                "ifTarget": 0,
+                "frequency": 102.3086211
+            },
+            {
+                "name": 27,
+                "ifTarget": 0,
+                "frequency": 95.8034486
+            },
+            {
+                "name": 28,
+                "ifTarget": 0,
+                "frequency": 139.8220654
+            },
+            {
+                "name": 29,
+                "ifTarget": 0,
+                "frequency": 99.63116061
+            }
+        ],
+        "isMinLevel": 1,
+        "highContrast": 2,
+        "chartPosi": 15,
+        "SD": 20,
+        "contrast": 0,
+        "valuePosi": 50,
+        "targetBar": 5,
+        "barScale": 30
+    },
+    {
+        "localContrast": 3,
+        "mean": 100,
+        "dataSource": [
+            {
+                "name": 0,
+                "ifTarget": 0,
+                "frequency": 97.49892184
+            },
+            {
+                "name": 1,
+                "ifTarget": 0,
+                "frequency": 88.81169237
+            },
+            {
+                "name": 2,
+                "ifTarget": 0,
+                "frequency": 47.00303466
+            },
+            {
+                "name": 3,
+                "ifTarget": 0,
+                "frequency": 90.10609954
+            },
+            {
+                "name": 4,
+                "ifTarget": 0,
+                "frequency": 101.8097553
+            },
+            {
+                "name": 5,
+                "ifTarget": 0,
+                "frequency": 97.93916237
+            },
+            {
+                "name": 6,
+                "ifTarget": 0,
+                "frequency": 126.4945574
+            },
+            {
+                "name": 7,
+                "ifTarget": 0,
+                "frequency": 105.7323621
+            },
+            {
+                "name": 8,
+                "ifTarget": 0,
+                "frequency": 102.8287174
+            },
+            {
+                "name": 9,
+                "ifTarget": 0,
+                "frequency": 90.92406947
+            },
+            {
+                "name": 10,
+                "ifTarget": 0,
+                "frequency": 101.4916522
+            },
+            {
+                "name": 11,
+                "ifTarget": 0,
+                "frequency": 110.8333212
+            },
+            {
+                "name": 12,
+                "ifTarget": 0,
+                "frequency": 94.1569703
+            },
+            {
+                "name": 13,
+                "ifTarget": 0,
+                "frequency": 69.04649001
+            },
+            {
+                "name": 14,
+                "ifTarget": 0,
+                "frequency": 118.7950319
+            },
+            {
+                "name": 15,
+                "ifTarget": 0,
+                "frequency": 94.40153903
+            },
+            {
+                "name": 16,
+                "ifTarget": 0,
+                "frequency": 80.26952863
+            },
+            {
+                "name": 17,
+                "ifTarget": 0,
+                "frequency": 105.036149
+            },
+            {
+                "name": 18,
+                "ifTarget": 0,
+                "frequency": 72.65013482
+            },
+            {
+                "name": 19,
+                "ifTarget": 0,
+                "frequency": 108.2139048
+            },
+            {
+                "name": 20,
+                "ifTarget": 0,
+                "frequency": 128.1122232
+            },
+            {
+                "name": 21,
+                "ifTarget": 0,
+                "frequency": 133.23101
+            },
+            {
+                "name": 22,
+                "ifTarget": 1,
+                "frequency": 85.09212169
+            },
+            {
+                "name": 23,
+                "ifTarget": 0,
+                "frequency": 134.383093
+            },
+            {
+                "name": 24,
+                "ifTarget": 0,
+                "frequency": 87.05985868
+            },
+            {
+                "name": 25,
+                "ifTarget": 0,
+                "frequency": 80.85478737
+            },
+            {
+                "name": 26,
+                "ifTarget": 0,
+                "frequency": 99.88781155
+            },
+            {
+                "name": 27,
+                "ifTarget": 0,
+                "frequency": 109.1641682
+            },
+            {
+                "name": 28,
+                "ifTarget": 0,
+                "frequency": 91.10255006
+            },
+            {
+                "name": 29,
+                "ifTarget": 0,
+                "frequency": 111.9104056
+            }
+        ],
+        "isMinLevel": 0,
+        "highContrast": 2,
+        "chartPosi": 22,
+        "SD": 20,
+        "contrast": 100,
+        "valuePosi": 25,
+        "targetBar": 9,
+        "barScale": 30
+    },
+    {
+        "localContrast": 1,
+        "contrast": 100,
+        "dataSource": [
+            {
+                "name": 0,
+                "ifTarget": 0,
+                "frequency": 80.27140757
+            },
+            {
+                "name": 1,
+                "ifTarget": 0,
+                "frequency": 100.6194622
+            },
+            {
+                "name": 2,
+                "ifTarget": 1,
+                "frequency": 76.75206749
+            },
+            {
+                "name": 3,
+                "ifTarget": 0,
+                "frequency": 112.5523471
+            },
+            {
+                "name": 4,
+                "ifTarget": 0,
+                "frequency": 88.13263477
+            },
+            {
+                "name": 5,
+                "ifTarget": 0,
+                "frequency": 88.75792659
+            },
+            {
+                "name": 6,
+                "ifTarget": 0,
+                "frequency": 50.73929117
+            },
+            {
+                "name": 7,
+                "ifTarget": 0,
+                "frequency": 50.81368006
+            },
+            {
+                "name": 8,
+                "ifTarget": 0,
+                "frequency": 90.39116808
+            },
+            {
+                "name": 9,
+                "ifTarget": 0,
+                "frequency": 93.60540699
+            }
+        ],
+        "isMinLevel": 0,
+        "highContrast": 2,
+        "barScale": 10,
+        "chartPosi": 2,
+        "valuePosi": 25,
+        "mean": 100,
+        "targetBar": 8,
+        "SD": 20
+    }
+]

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: white ;
+  stroke: #000;
+}
+
+/* .bar:hover {
+  fill: orangered;
+} 
+*/
+.x.axis path {
+  display: none;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+#LLL {
+  fill: orangered;
+}
+
+
+#g1 {
+  fill: rgb(188, 188, 0);
+}
+
+#error{
+	border:0;
+	color:#f00;
+	width:250px;
+}
+
+#myText{
+	border:0;
+}
+
+#evaluationValue{
+	width:40px;
+}
+
+</style>
+<body>
+    
+    <b>Index: </b><input type="text" id="myText" readonly value="0">
+    <p>
+      </p>  
+    <div id="option">
+    	<input name="updateButton" 
+               type="button" 
+               value="Previous" 
+               onclick="prevData()" >
+        <input name="updateButton" 
+               type="button" 
+               value="Next" 
+               onclick="updateData()" />     
+    </div>
+    <br />
+    <div>
+    	<input type="text" id="evaluationValue" value="">% &nbsp;&nbsp;&nbsp;
+    	<input name="saveAndNext" 
+               type="button" 
+               value="Save and Next" 
+               onclick="updateData2()" >
+        <br />
+        <input type="text" id="error" readonly value="">
+        <br />
+        User Name
+        <input type="text" id="userName" value="">
+        <input name="submit" 
+               type="button" 
+               value="submit" 
+               onclick="submit()" >
+
+    </div>
+<!-- <script src="lodash.js"></script> -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+<script>
+
+var margin = {top: 40, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    width2 = 360 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var formatPercent = d3.format(''); //".0%"
+
+
+var x = d3.scale.ordinal()
+   .rangeRoundBands([0, width], .1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+
+    .orient("bottom");
+    
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .ticks(0)
+    ////// bar 30 tick(2)
+    .tickFormat(formatPercent);
+
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + (margin.left) + "," + (margin.top ) + ")");
+
+var Data = []
+
+var evaluationValues = new Array(240);
+
+for(var i = 0; i < evaluationValues.length; i++){
+	evaluationValues[i] = -1;
+}
+console.log(evaluationValues);
+
+
+d3.json("output0221-s2.json", function(error, data) {
+
+ 
+  if (error) throw error;
+  Data = data
+  console.log(Data)
+  
+  var input = data['0']["dataSource"]
+  
+  render(input)
+
+
+});
+
+function render(input){
+  console.log(i)
+  
+  if(input.length == 10){
+    var x = d3.scale.ordinal()
+      .rangeBands([0, width2], .1);
+    var xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom");
+    x.domain(input.map(function(d) { return  d.name; }));
+  }
+  else{
+    var x = d3.scale.ordinal()
+      .rangeBands([0, width], .1);
+    var xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom");
+    x.domain(input.map(function(d) { return  d.name; }));
+  }
+
+  x.domain(input.map(function(d) { return  d.name; }));
+  y.domain([0, d3.max(input, function(d) { return d.frequency; })]);
+    console.log(x)
+    console.log(y)
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(10," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "translate(80,0)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("");
+
+  svg.selectAll(".bar")
+      .data(input)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d.name); })
+      .attr("width", x.rangeBand()) //
+      .attr("y", function(d) {  return y(d.frequency); })
+      .attr("height", function(d) { return height - y(d.frequency); })
+      .attr("transform", "translate(10, 0)");
+
+      
+  svg.selectAll("circle")
+      .data(input)
+      .enter()
+      .append("circle")
+      .attr("cx", function (d, i) { return (x(d.name) + 0.5 * x.rangeBand())   })
+      .attr("cy", function (d) { return 420; })
+      .attr("r", function (d) { return 2 * d.ifTarget; })
+      .attr("transform", "translate(10, 0)")
+      .style("fill", "orangered");
+}
+
+function type(d) {
+  d.frequency = +d.frequency;
+  return d;
+}
+var i = 0;
+console.log(i)
+
+function updateData() {
+	document.getElementById("error").value = "";
+	document.getElementById("evaluationValue").value = "";
+
+	i = i + 1;
+  if(i == 240){
+    alert('No index after 239!');
+    i = i - 1;
+  }
+	document.getElementById("myText").value = i;
+	d3.selectAll(".bar").remove();
+	d3.selectAll(".axis").remove();
+
+	d3.selectAll("circle").remove();
+	render(Data[i]['dataSource']);
+}
+
+function updateData2() {
+	if(isInteger(document.getElementById("evaluationValue").value)){
+		var number = Number(document.getElementById("evaluationValue").value);
+		if(number >= 0 && number <= 100){
+			document.getElementById("error").value = "";
+			evaluationValues[i] = Number(document.getElementById("evaluationValue").value);
+			document.getElementById("evaluationValue").value = "";
+			i = i + 1;
+      if(i == 240){
+        alert('Saved successfully. There is no index after 239!');
+        i = i - 1;
+      }
+			document.getElementById("myText").value = i;
+			d3.selectAll(".bar").remove();
+			d3.selectAll(".axis").remove();
+
+			d3.selectAll("circle").remove();
+			render(Data[i]['dataSource']);
+
+			console.log(evaluationValues);
+		}
+		else{
+			document.getElementById("evaluationValue").value = "";
+			document.getElementById("error").value = "Please input an integer from 0 to 100!";
+		}
+	}
+
+	else{
+		document.getElementById("evaluationValue").value = "";
+		document.getElementById("error").value = "Please input an integer from 0 to 100!";
+	}
+}
+
+function prevData() {
+	document.getElementById("error").value = "";
+	document.getElementById("evaluationValue").value = "";
+	i = i - 1;
+  if(i == -1){
+    alert('No index in front of 0!');
+    i = i + 1;
+  }
+	document.getElementById("myText").value = i;
+	d3.selectAll(".bar").remove();
+	d3.selectAll(".axis").remove();
+	d3.selectAll("circle").remove();
+	render(Data[i]['dataSource'])
+}
+
+function submit(){
+	if(document.getElementById("userName").value==''){
+		document.getElementById("error").value = "";
+		document.getElementById("evaluationValue").value = "";
+		alert('The user name cannot be empty!');
+	}
+	else{
+		document.getElementById("error").value = "";
+		document.getElementById("evaluationValue").value = "";
+		var userName = document.getElementById("userName").value;
+		document.getElementById("userName").value = "";
+		var data = {};
+		data['userName'] = userName;
+		data['evaluationValues'] = evaluationValues;
+		console.log(data);
+	    // console.log(userName);
+	    $.ajax({
+	    	url:"http://143.89.76.21/bar/saveSubmit.php",
+	    	type: 'POST',
+	    	data: {'data': JSON.stringify(data)},
+	    	success: function (msg) {
+	    		alert(msg)
+	    	}
+	    })
+	}
+}
+
+function isInteger(number){
+	var reg=/^[1-9]\d*$|^0$/;
+	return reg.test(number);
+}
+
+</script>
